@@ -74,7 +74,6 @@ def randQCQP(N_, M_,proj_=None, convex_=True, distrib_="uniform", equality_=Fals
     else:
         x_rand = proj_(create_randMat(distrib_, (N_)))
     q0 = np.concatenate((x_rand, np.ones(M_)))
-    print(x_rand)
     if convex_:
         p_temp = create_randMat(distrib_, (N_, N_))
         p.append(np.dot(p_temp, p_temp.transpose()))
